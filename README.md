@@ -39,6 +39,14 @@ Command di atas akan menghasilkan:
 - Views:
 
 ## 📂 Struktur Direktori Views
+```text
+resources/views/
+└── admin/
+    └── dosen/
+        ├── index.blade.php -> untuk halaman utama yang menunjukan tabel
+        ├── create.blade.php -> untuk halaman form tambah
+        └── edit.blade.php -> untuk halaman form edit
+```
 
 ## 🧪 Testing
 - Jalankan server Laravel:
