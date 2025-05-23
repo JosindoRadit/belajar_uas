@@ -35,15 +35,17 @@
                     <span class="mx-3">Dashboard</span>
                 </a>
 
-                <a class="flex items-center px-6 py-2 mt-4 {{ request()->routeIs('dosen.*') ? 'text-gray-100 bg-gray-700' : 'text-gray-500 hover:bg-gray-700 hover:text-gray-100' }}" href="{{ route('dosen.index') }}">
+                <a class="flex items-center px-6 py-2 mt-4 {{ request()->routeIs('matkul.*') ? 'text-gray-100 bg-gray-700' : 'text-gray-500 hover:bg-gray-700 hover:text-gray-100' }}" href="{{ route('matkul.index') }}">
                     <i class="fas fa-user-tie mr-3"></i>
-                    <span class="mx-3">Dosen</span>
+                    <span class="mx-3">matkul</span>
                 </a>
 
-                <a class="flex items-center px-6 py-2 mt-4 {{ request()->routeIs('mahasiswa.*') ? 'text-gray-100 bg-gray-700' : 'text-gray-500 hover:bg-gray-700 hover:text-gray-100' }}" href="{{ route('mahasiswa.index') }}">
-                    <i class="fas fa-user-graduate mr-3"></i>
-                    <span class="mx-3">Mahasiswa</span>
+                 <a class="flex items-center px-6 py-2 mt-4 {{ request()->routeIs('kelas.*') ? 'text-gray-100 bg-gray-700' : 'text-gray-500 hover:bg-gray-700 hover:text-gray-100' }}" href="{{ route('kelas.index') }}">
+                    <i class="fas fa-user-tie mr-3"></i>
+                    <span class="mx-3">kelas</span>
                 </a>
+
+                
             </nav>
         </div>
 

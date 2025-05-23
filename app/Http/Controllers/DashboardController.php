@@ -20,16 +20,16 @@ class DashboardController extends Controller
     public function index()
     {
         try {
-            $dosenResponse = $this->client->request('GET', $this->baseUrl . '/dosen');
-            $mahasiswaResponse = $this->client->request('GET', $this->baseUrl . '/mahasiswa');
+            $matkulResponse = $this->client->request('GET', $this->baseUrl . '/matkul');
             
-            $dosen = json_decode($dosenResponse->getBody()->getContents(), true);
-            $mahasiswa = json_decode($mahasiswaResponse->getBody()->getContents(), true);
             
-            $dosenCount = is_array($dosen) ? count($dosen) : 0;
-            $mahasiswaCount = is_array($mahasiswa) ? count($mahasiswa) : 0;
+            $matkul = json_decode($matkulResponse->getBody()->getContents(), true);
             
-            return view('admin.dashboard', compact('dosenCount', 'mahasiswaCount'));
+            
+            $matkulCount = is_array($matkul) ? count($matkul) : 0;
+            
+            
+            return view('admin.dashboard', compact('matkulCount'));
         } catch (RequestException $e) {
             return view('admin.dashboard')->with('error', 'Failed to fetch data: ' . $e->getMessage());
         }
